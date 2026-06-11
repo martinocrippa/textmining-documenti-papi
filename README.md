@@ -55,6 +55,26 @@ sul tavolo:
 Il racconto — quale storia raccontano i dati, e in che forma — è parte del
 lavoro da fare, non un dato di partenza.
 
+## Copyright e dati: la regola del repo
+
+Vale qui come nell'ingestion e nel vector database, ed è il vincolo che tiene
+tutto "senza problemi":
+
+- **Si versiona solo il codice rilanciabile.** I dati (corpus, indice arricchito)
+  restano locali e in `.gitignore`; si rigenerano dagli altri due repo.
+- **Nessun testo reale nel repo.** I testi restano © Libreria Editrice Vaticana;
+  l'uso è personale e di studio, con la fonte (`url`) sempre tracciata nei
+  metadati.
+
+Per il text mining questo vincolo combacia con la natura stessa del lavoro: qui
+si producono **viste aggregate**, non i testi. Conteggi, trend nel tempo, topic,
+distanze tra corpora, frequenze di frame: tutti **risultati derivati** che
+sintetizzano il corpus senza riprodurlo. Le eventuali **citazioni puntuali**
+(per il RAG o per illustrare un tema) restano brevi estratti con la fonte
+indicata — non la ripubblicazione dei documenti. In altre parole, l'output
+naturale del repo (aggregati e visualizzazioni) è già nella forma che rispetta
+il copyright.
+
 ## Stato
 
 Scaffold iniziale: solo le domande e la direzione. Il codice delle analisi

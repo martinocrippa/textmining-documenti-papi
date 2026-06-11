@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Dati e artefatti: LOCALI, non versionati. Si rigenerano dagli altri repo
+# (ingestion -> data/, vector database -> indice/ arricchito).
+# Qui si versiona solo il codice delle analisi; i testi sono © LEV.
+data/
+resources/
+indice/
+*.log
+
+# Output rigenerabili delle analisi (figure, esportazioni di grandi dimensioni).
+# Le viste aggregate "buone" da conservare vanno committate esplicitamente.
+output/
+*.parquet
