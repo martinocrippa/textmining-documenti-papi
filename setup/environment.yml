@@ -1,0 +1,14 @@
+name: textmining-papi
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pandas>=2.0
+  - numpy>=1.24
+  - pyarrow>=14
+  - matplotlib>=3.7
+  - jupyter
+  - pip
+  # Baseline per le viste aggregate / notebook / data viz. Le librerie
+  # specifiche delle analisi (topic modeling, NLP, dashboard) si aggiungono
+  # qui man mano che le analisi vengono scelte.

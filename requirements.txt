@@ -1,0 +1,8 @@
+# Text mining — viste aggregate e analisi. Python >= 3.9 (consigliato 3.12).
+# Baseline per aggregati / notebook / data viz; le librerie specifiche delle
+# analisi (topic modeling, NLP, dashboard) si aggiungono man mano.
+pandas>=2.0
+numpy>=1.24
+pyarrow>=14
+matplotlib>=3.7
+jupyter

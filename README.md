@@ -75,7 +75,18 @@ indicata — non la ripubblicazione dei documenti. In altre parole, l'output
 naturale del repo (aggregati e visualizzazioni) è già nella forma che rispetta
 il copyright.
 
+## Setup
+
+Ambiente Python per le viste aggregate / notebook / data viz. Dettagli (conda e
+venv) in [setup/README.md](setup/README.md).
+
+```bash
+conda env create -f setup/environment.yml && conda activate textmining-papi
+# oppure: pip install -r requirements.txt
+```
+
 ## Stato
 
-Scaffold iniziale: solo le domande e la direzione. Il codice delle analisi
-arriverà man mano che i dati arricchiti del vector database saranno disponibili.
+Scaffold iniziale: solo le domande e la direzione, più l'ambiente di base. Il
+codice delle analisi arriverà man mano che i dati arricchiti del vector database
+saranno disponibili.
