@@ -14,6 +14,7 @@ sull'indice LanceDB del *vector database* (repo gemello) tramite il ponte
 | [`04-struttura-argomenti.ipynb`](04-struttura-argomenti.ipynb) | La nostra ipotesi di argomenti, strutturata e **marcata** sui dati | Sei famiglie con un'ancora semantica; ogni **chunk** prende la sua (i discorsi si mischiano). La linea rossa è ~80% per tutti; le differenze stanno nella fascia sottile (attualità FRA/LEO, viaggi GP2). |
 | [`05-mandato.ipynb`](05-mandato.ipynb) | Hanno tenuto il **mandato** dichiarato all'inizio? | Vettore-mandato = baricentro dell'omelia di inizio pontificato; fedeltà anno per anno. Trend piatto per tutti = nessuna deriva (GP2 stabile su 27 anni). |
 | [`06-sintesi-per-un-amico.ipynb`](06-sintesi-per-un-amico.ipynb) | Le risposte alle domande dell'amico, in chiaro | Per ogni domanda: *ipotesi → domanda → analisi → conclusione*, con le figure. La sintesi divulgativa di tutto il resto. |
+| [`07-argomenti-nel-tempo.ipynb`](07-argomenti-nel-tempo.ipynb) | Gli argomenti **estratti** dal dato, seguiti nel tempo (dentro e tra i Papi) | Topic extraction vera (modello condiviso) + heatmap argomento × anno: continuità del fondo e ondate legate ai Papi (Santa Marta di Francesco, il sociale che sale, l'America Latina di GP2 che cala). |
 
 ## Come si eseguono
 
