@@ -205,9 +205,10 @@ Nei prossimi giorni, a mente fredda: **analisi migliori e percorsi più solidi**
 2. **Topic modeling migliore**: BERTopic sugli stessi embedding (HDBSCAN, niente
    *k* imposto, topic-over-time nativo, etichette migliori), con NMF "a parole"
    come controprova. (LDA / NTM scartati — vedi nota in fondo.)
-3. **Topic nel vector database** come campo arricchito (`vdb.py arricchisci`, campo
-   `famiglia`/topic): **proposto, non ancora implementato** — il "come" è tracciato
-   nel repo del vector database (`doc/architettura.md`).
+3. **Topic nel vector database**: **fatto** per la famiglia — `vdb.py arricchisci`
+   scrive i campi `famiglia`/`famiglia_sim` nell'indice, filtrabili con
+   `search --famiglia`. Resta da aggiungere il topic emergente (etichetta stabile)
+   quando arriva BERTopic.
 4. **Profilo di argomenti per Papa** da mettere a confronto; **direzione
    distintiva** di ogni mandato; **frame morali/valoriali**.
 
