@@ -39,6 +39,20 @@ prima pagina" vivono nel **20% che resta**.
 
 ![Di cosa parlano: la struttura per famiglie](immagini/sintesi-struttura.png)
 
+**È la nostra vista o è nel dato?** Le sei famiglie, va detto, sono pur sempre una
+*nostra* ipotesi: le proponiamo noi e ci misuriamo i testi. Allora abbiamo fatto
+la controprova opposta — lasciare che gli argomenti **emergano dai testi**,
+raggruppandoli per conto loro, senza suggerirne nessuno. E tornano le stesse
+grandi aree: il fondo liturgico-devozionale, poi viaggi, eventi, programma,
+attualità — con in più qualche dettaglio fine (le visite dei vescovi, la Settimana
+Santa, il dialogo tra religioni). La nostra **vista** e il **dato** si danno
+ragione a vicenda.[^dato]
+
+> **Come, tecnicamente.** Due strade opposte, stesso punto d'arrivo: o *proponiamo*
+> noi le famiglie e ci misuriamo i discorsi (la nostra ipotesi); o lasciamo che il
+> programma *raggruppi* i discorsi simili e faccia emergere gli argomenti da sé (il
+> dato). Quando le due strade convergono, ci si può fidare.
+
 **La domanda che ne nasce.** Ma se il fondo è identico per tutti, allora dov'è
 finita la "rottura" di cui si parla sempre con Francesco?
 
@@ -129,3 +143,7 @@ tecnica*, §2.
 
 [^ambiente]: Quota di documenti sull'ambiente quasi identica per i quattro; la
 differenza è la **frase** "casa comune", non il tema. *Appendice tecnica*, §3.
+
+[^dato]: Controprova "dal dato": i discorsi sono raggruppati automaticamente per
+significato, senza temi imposti, e gli argomenti emergono da soli — confermando le
+famiglie proposte da noi. *Appendice tecnica*, §4.
