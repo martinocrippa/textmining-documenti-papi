@@ -13,6 +13,7 @@ sull'indice LanceDB del *vector database* (repo gemello) tramite il ponte
 | [`03-topic-emergenti.ipynb`](03-topic-emergenti.ipynb) | E se i temi li lasciamo **emergere** dai dati invece di sceglierli? | KMeans sugli embedding + c-TF-IDF: emergono la linea rossa liturgica, lo strato "dovuto" dal ruolo e le firme dei singoli Papi. Primo passo della topic extraction. |
 | [`04-struttura-argomenti.ipynb`](04-struttura-argomenti.ipynb) | La nostra ipotesi di argomenti, strutturata e **marcata** sui dati | Sei famiglie con un'ancora semantica; ogni **chunk** prende la sua (i discorsi si mischiano). La linea rossa è ~80% per tutti; le differenze stanno nella fascia sottile (attualità FRA/LEO, viaggi GP2). |
 | [`05-mandato.ipynb`](05-mandato.ipynb) | Hanno tenuto il **mandato** dichiarato all'inizio? | Vettore-mandato = baricentro dell'omelia di inizio pontificato; fedeltà anno per anno. Trend piatto per tutti = nessuna deriva (GP2 stabile su 27 anni). |
+| [`06-sintesi-per-un-amico.ipynb`](06-sintesi-per-un-amico.ipynb) | Le risposte alle domande dell'amico, in chiaro | Per ogni domanda: *ipotesi → domanda → analisi → conclusione*, con le figure. La sintesi divulgativa di tutto il resto. |
 
 ## Come si eseguono
 
