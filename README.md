@@ -160,12 +160,23 @@ conda env create -f setup/environment.yml && conda activate textmining-papi
 
 ## Stato
 
-Cinque analisi in piedi in [`analisi/`](analisi/): temi per Papa (parole vs
+Sette analisi in piedi in [`analisi/`](analisi/): temi per Papa (parole vs
 significato, con heatmap), il metodo di ricerca (perché ibrida, perché niente
 soglie), i **topic emergenti** (KMeans + c-TF-IDF), la **struttura per famiglie**
-(la nostra ipotesi marcata chunk per chunk, coi discorsi che si mischiano) e il
-**mandato dichiarato** nel tempo. Il quadro: continuità schiacciante (la linea
-rossa liturgico-devozionale è ~80% per tutti), differenze negli accenti
-(attualità per Francesco/Leone, viaggi per GP2), e nessuna deriva dal mandato
-iniziale. Passo successivo: isolare la **direzione distintiva** di ogni mandato e
-seguirla nel tempo (vedi nota nel notebook 05).
+(la nostra ipotesi marcata chunk per chunk, coi discorsi che si mischiano), il
+**mandato dichiarato** e gli **argomenti estratti seguiti nel tempo** (07: topic
+extraction condivisa + heatmap argomento × anno). Più gli articoli divulgativi in
+[`articles/`](articles/), con appendice tecnica.
+
+Il quadro: continuità del fondo (la linea rossa liturgico-devozionale è ~80% per
+tutti) con accenti che **scorrono nel tempo**, spesso ai cambi di Papa (Santa
+Marta in Francesco, il sociale in Francesco/Leone, l'America Latina in GP2); e
+nessuna deriva dal mandato iniziale.
+
+**Prossimi passi (aperti):**
+- portare i **topic nel vector database** come campo arricchito (`vdb.py
+  arricchisci`): proposto, **non ancora implementato**;
+- ripulire le **etichette** dei topic (ora parole-chiave grezze);
+- isolare la **direzione distintiva** di ogni mandato (nota nel notebook 05);
+- valutare una tecnica di **frame morali/valoriali** (language-based preferences /
+  LENS) accanto alla topic extraction — da mettere a fuoco.

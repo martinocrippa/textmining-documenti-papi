@@ -110,6 +110,30 @@ Stessa storia per l'ambiente: ne parlano tutti più o meno allo stesso modo. Que
 che è *davvero* di Francesco non è il tema, è il **modo di dirlo** — la formula
 "casa comune" della *Laudato si'*.[^ambiente]
 
+## E nel tempo? Il filo resta, gli accenti scorrono
+
+C'è un ultimo modo di guardare, il più onesto: non le nostre famiglie, ma gli
+argomenti che **emergono da soli** dai testi — e seguirli **anno per anno**, lungo
+tutti e quattro i pontificati.
+
+![Gli argomenti estratti, seguiti nel tempo](immagini/argomenti-nel-tempo.png)
+
+> **Come, tecnicamente.** Un solo raggruppamento dei discorsi *condiviso* tra tutti
+> i Papi (così un argomento vuol dire la stessa cosa per ognuno), poi si contano i
+> passaggi di ogni argomento anno per anno. Niente temi imposti da noi: emergono e
+> si contano.
+
+Il quadro non è "tutto uguale" né "tutto cambia": è **continuità del fondo e
+movimento negli accenti**. Alcuni argomenti sono righe piene per mezzo secolo — il
+Vangelo, la famiglia, Maria, l'ecumenismo: il filo che non si spezza. Altri vanno
+a **ondate**, e le ondate cambiano spesso proprio al cambio di Papa: l'America
+Latina e le visite dei vescovi pesano negli anni di Giovanni Paolo II; le omelie
+quotidiane di *Santa Marta* sono un blocco tutto di Francesco; il filone sociale —
+disarmo, agricoltura, migranti — si accende con Francesco e Leone.[^tempo]
+
+Ecco perché conviene non tirare conclusioni affrettate: la continuità è vera, ma
+non è immobilità. È una voce sola che, nel tempo, sposta gli accenti.
+
 ## La morale
 
 Seguendo le domande una dopo l'altra si arriva sempre lì: i numeri smontano il
@@ -147,3 +171,8 @@ differenza è la **frase** "casa comune", non il tema. *Appendice tecnica*, §3.
 [^dato]: Controprova "dal dato": i discorsi sono raggruppati automaticamente per
 significato, senza temi imposti, e gli argomenti emergono da soli — confermando le
 famiglie proposte da noi. *Appendice tecnica*, §4.
+
+[^tempo]: Stessi argomenti estratti dal dato, ma con un **unico raggruppamento
+condiviso** tra i Papi (così sono confrontabili) e contati **per anno**: la
+heatmap mostra continuità (righe piene) e ondate (macchie). *Appendice tecnica*,
+§4 e notebook 07.

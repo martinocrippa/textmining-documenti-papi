@@ -80,8 +80,9 @@ del tema generale si vede che il tema è di tutti, l'espressione è sua.
 
 ## 4. «I temi che emergono da soli» (topic emergenti)
 
-→ metodo di sfondo, citato in *Parole o significato*. **Notebook
-[`03-topic-emergenti`](../analisi/03-topic-emergenti.ipynb).**
+→ metodo di sfondo, citato in *Parole o significato* e in *Di cosa parlano* (§"nel
+tempo"). **Notebook [`03-topic-emergenti`](../analisi/03-topic-emergenti.ipynb)** e
+**[`07-argomenti-nel-tempo`](../analisi/07-argomenti-nel-tempo.ipynb).**
 
 Senza dirgli noi i temi: raggruppiamo i documenti per **vicinanza di significato**
 (algoritmo *KMeans* sui vettori) e diamo un nome a ogni gruppo con le parole che lo
@@ -89,6 +90,12 @@ caratterizzano (frequenti *dentro* il gruppo e rare *fra* i gruppi). Emergono da
 soli la linea rossa liturgica, lo strato "dovuto" dal ruolo (vescovi, diplomatici,
 accademie, viaggi) e le firme dei singoli — conferma indipendente di ciò che le
 famiglie del §1 dicevano.
+
+Il notebook 07 fa il passo in più: un **unico raggruppamento condiviso** su tutti
+i Papi (così l'argomento *k* è confrontabile tra pontificati), ogni passaggio
+riceve la sua etichetta-argomento, e si **contano le etichette per anno**. La
+heatmap argomento × anno mostra continuità (righe piene) e ondate (macchie),
+spesso ai cambi di Papa. È topic extraction "vera", non somiglianza a temi nostri.
 
 ## 5. «Hanno tenuto il mandato» (fedeltà nel tempo)
 
