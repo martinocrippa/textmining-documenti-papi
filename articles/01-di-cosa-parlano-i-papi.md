@@ -1,21 +1,28 @@
 # Di cosa parlano davvero i Papi
 
 *Abbiamo preso venticinquemila discorsi di quattro Papi e li abbiamo contati. Per
-rispondere, una buona volta, alle domande che ci facevamo al bar — una tira
+rispondere, una buona volta, alle domande che ci si fa tra amici — una tira
 l'altra.*
 
 ---
 
-Succede a tutti, una sera, davanti a un giornale: *"ma questo Papa è comunista? Ha
-rotto con quelli di prima? Parla solo di migranti?"*. Domande vere, di quelle sul
-senso delle cose e sulla fede, che però finiscono sempre a colpi di impressioni. A
-un certo punto ci siamo detti: invece di tirare a indovinare, **guardiamo i dati**.
+Su Papa Francesco c'è una narrazione precisa — quella dei giornali, quella che
+torna quando se ne parla tra amici: *"ma è comunista? Ha rotto con quelli di prima?
+Parla solo di migranti?"*. Domande vere. Solo che la risposta, di solito, è
+un'impressione. E lato dati, invece, è davvero così? Per scoprirlo abbiamo fatto la
+cosa più semplice: **guardiamo i dati**.
 
 Abbiamo raccolto circa **venticinquemila testi** dei quattro Papi più recenti —
 Giovanni Paolo II, Benedetto XVI, Francesco e Leone XIV — e li abbiamo fatti
 leggere a un programma capace non solo di cercare le parole, ma di capire il
 **senso** delle frasi. Poi abbiamo seguito le domande, una alla volta, lasciando
 che ogni risposta ne aprisse un'altra.
+
+Con una regola fissa, per non prenderci in giro: a ogni domanda **cambiamo
+strumento di misura** — prima le parole, poi il significato, poi i gruppi che
+emergono da soli — e una risposta la teniamo buona solo se gli strumenti diversi
+**dicono lo stesso numero**. Se concordano, ci fidiamo; se litigano, è un segnale
+che lì sotto c'è qualcosa da guardare meglio.
 
 ## Prima domanda: di cosa è fatto un Papa?
 
@@ -28,10 +35,12 @@ pontificato; l'attualità) e poi, per **significato**, abbiamo assegnato ogni
 *passaggio* dei discorsi alla famiglia più affine. Non i discorsi interi: i pezzi
 — perché un'omelia mischia liturgia e attualità nella stessa pagina.[^struttura]
 
-> **Come, tecnicamente.** Ogni passaggio diventa un *vettore* — una sequenza di
-> numeri che ne cattura il senso. Lo confrontiamo con sei "frasi-ancora" (una per
-> famiglia) e gli diamo la più vicina. Per **significato**, non per parole; e
-> nessuna soglia, solo "qual è la più vicina".
+> **Come, tecnicamente.** Ogni passaggio (~180 parole) diventa un *vettore* di
+> significato con il modello multilingue `multilingual-e5-base`. I vettori sono
+> normalizzati, quindi confrontarli è calcolare un **coseno**: misuriamo il
+> passaggio contro sei "frasi-ancora" (una per famiglia) e gli diamo la **più
+> vicina**. Per significato, non per parole; e **nessuna soglia** — solo "qual è
+> l'ancora più vicina".
 
 **La risposta.** Circa l'**80% di tutto è la stessa cosa**, per tutti e quattro:
 Dio, Gesù, Maria, il Vangelo, i sacramenti — la *lunga linea rossa*. I temi "da
@@ -49,9 +58,11 @@ Santa, il dialogo tra religioni). La nostra **vista** e il **dato** si danno
 ragione a vicenda.[^dato]
 
 > **Come, tecnicamente.** Due strade opposte, stesso punto d'arrivo: o *proponiamo*
-> noi le famiglie e ci misuriamo i discorsi (la nostra ipotesi); o lasciamo che il
-> programma *raggruppi* i discorsi simili e faccia emergere gli argomenti da sé (il
-> dato). Quando le due strade convergono, ci si può fidare.
+> noi le sei famiglie-ancora e assegniamo ogni discorso alla più vicina (la nostra
+> ipotesi); o lasciamo che un **KMeans** sui vettori e5 *raggruppi* i discorsi
+> simili e faccia emergere gli argomenti da sé, etichettati con le parole che li
+> caratterizzano (c-TF-IDF: frequenti *nel* gruppo, rare *fra* i gruppi — il dato).
+> Quando le due strade convergono, ci si può fidare.
 
 **La domanda che ne nasce.** Ma se il fondo è identico per tutti, allora dov'è
 finita la "rottura" di cui si parla sempre con Francesco?
@@ -67,10 +78,13 @@ dominanti **a significato** (il programma capisce il senso delle frasi) e
 lasciato che i temi **emergessero da soli** dai testi, raggruppando i discorsi per
 vicinanza di senso senza suggerirgliene nessuno.[^continuita]
 
-> **Come, tecnicamente.** Tre lenti sulla stessa cosa: conteggio per *parole
-> chiave*; conteggio per *significato* (gli stessi vettori di senso); e
-> *raggruppamento* automatico dei discorsi simili, senza temi imposti. Se tutte e
-> tre dicono lo stesso, è solido.
+> **Come, tecnicamente.** Tre lenti sulla stessa cosa. (1) *Parole chiave*: liste
+> di radici via regex (es. `pover|emarginat`), si conta la quota di documenti che
+> ne contengono almeno una. (2) *Significato*: lo stesso tema descritto a frase, si
+> prendono i documenti più vicini (coseno sugli e5) **in pari numero** ai positivi
+> a parole — stesso volume, così confrontiamo distribuzioni, non soglie. (3)
+> *Raggruppamento* automatico (KMeans) senza temi imposti. Se tutte e tre dicono lo
+> stesso, è solido.
 
 **La risposta.** **Continuità schiacciante.** I temi che dominano — parlare di Dio
 e del Vangelo, della pace, della famiglia — tornano quasi alle stesse percentuali
@@ -82,8 +96,8 @@ stessa voce**: Francesco cambia gli accenti, non la sostanza.
 
 ![La continuità vista dagli embedding](immagini/sintesi-continuita-significato.png)
 
-**La domanda che ne nasce.** E allora quel sospetto da bar — "è comunista" — da
-dove salta fuori? Qualcosa di diverso, in Francesco, ci sarà pure.
+**La domanda che ne nasce.** E allora quell'idea — "è comunista" — da dove salta
+fuori? Qualcosa di diverso, in Francesco, ci sarà pure.
 
 ## Terza domanda: Francesco è comunista?
 
@@ -94,7 +108,9 @@ fissazione? E basta questo a fare di un Papa un comunista?
 migranti, giustizia, lavoro — e confrontato fra i quattro.[^sociali]
 
 > **Come, tecnicamente.** Lo stesso conteggio di prima (parole *e* significato),
-> ristretto ai temi sociali e messo a confronto fra i quattro Papi alla pari.
+> ristretto ai temi sociali. Per confrontare alla pari usiamo il **`lift`**: la
+> quota di un Papa su quel tema divisa per la media dei quattro — >1 sta sopra la
+> media, <1 sotto, ~1 in linea.
 
 **La risposta.** Sì, Francesco **accentua** davvero poveri, migranti e
 disuguaglianze: è il suo timbro. Ma due cose raddrizzano il titolo. Primo: sono
@@ -118,27 +134,68 @@ tutti e quattro i pontificati.
 
 ![Gli argomenti estratti, seguiti nel tempo](immagini/argomenti-nel-tempo.png)
 
-> **Come, tecnicamente.** Un solo raggruppamento dei discorsi *condiviso* tra tutti
-> i Papi (così un argomento vuol dire la stessa cosa per ognuno), poi si contano i
-> passaggi di ogni argomento anno per anno. Niente temi imposti da noi: emergono e
-> si contano.
+> **Come, tecnicamente.** Un solo **KMeans** sui vettori e5 *condiviso* tra tutti i
+> Papi (così l'argomento *k* vuol dire la stessa cosa per ognuno; nomi dei gruppi
+> per c-TF-IDF), poi si contano i passaggi di ogni argomento **anno per anno**.
+> Niente temi imposti da noi: emergono e si contano.
+
+Si legge così: in orizzontale gli anni, dal 1978 a oggi; ogni riga è un argomento;
+più una casella è scura, più di quell'argomento si è parlato quell'anno. Le tre
+righe verticali azzurre sono i cambi di Papa (2005 Benedetto, 2013 Francesco, 2025
+Leone): tienile d'occhio, perché è lì che succedono le cose.
 
 Il quadro non è "tutto uguale" né "tutto cambia": è **continuità del fondo e
-movimento negli accenti**. Alcuni argomenti sono righe piene per mezzo secolo — il
-Vangelo, la famiglia, Maria, l'ecumenismo: il filo che non si spezza. Altri vanno
-a **ondate**, e le ondate cambiano spesso proprio al cambio di Papa: l'America
-Latina e le visite dei vescovi pesano negli anni di Giovanni Paolo II; le omelie
-quotidiane di *Santa Marta* sono un blocco tutto di Francesco; il filone sociale —
-disarmo, agricoltura, migranti — si accende con Francesco e Leone.[^tempo]
+movimento negli accenti**. Alcune righe sono colorate in modo uniforme per mezzo
+secolo, da sinistra a destra — il Vangelo, l'ecumenismo, i sacramenti: il filo che
+non si spezza, chiunque sia il Papa. Altre invece si accendono a **ondate**, e
+quasi sempre l'ondata parte di netto in corrispondenza di una riga azzurra — cioè
+appena cambia il Papa. Si vede a occhio: l'America Latina (le visite dei vescovi,
+Taizé) è densa negli anni di Giovanni Paolo II e si schiarisce dopo; *Santa Marta*
+— le omelie quotidiane di Francesco — è una macchia scura che prima del 2013 non
+esiste proprio, è bianca, e poi compare di colpo; il filone sociale — disarmo,
+agricoltura, migranti — si accende con Francesco e resta acceso con Leone, fino
+all'ultima colonna.[^tempo]
 
 Ecco perché conviene non tirare conclusioni affrettate: la continuità è vera, ma
 non è immobilità. È una voce sola che, nel tempo, sposta gli accenti.
 
+Una cautela, però, perché qui cambiamo di nuovo strumento e questo è il più grezzo
+dei tre: la heatmap ci dice **che** un argomento va a ondate, non ancora **cosa**
+contiene di preciso quell'ondata. Per dirlo servirà scendere nel dettaglio, una
+macchia alla volta — ed è lavoro per le analisi che verranno.
+
+## Il prossimo passo: un profilo per ogni Papa
+
+L'idea che vorremmo provare è semplice: dare a ciascun Papa un suo **profilo di
+argomenti** — quanto pesa ognuno dei temi, in proporzione — e poi mettere i quattro
+profili uno accanto all'altro, per leggere le differenze a colpo d'occhio invece
+che frase per frase.
+
+> **Come, tecnicamente.** Per ogni Papa un vettore di quote (un numero per
+> argomento, che somma a 1: la sua composizione tematica). Il confronto a coppie con
+> una distanza fra distribuzioni — coseno, oppure Jensen-Shannon — dice quanto due
+> Papi si somigliano; l'intera matrice si può proiettare in due dimensioni per
+> vederli su una mappa.
+
+**Pro.** È onesto e leggibile: un solo quadro mette i quattro alla pari e fa vedere
+*quanto* e *dove* si discostano, non solo "sì/no si somigliano". Si aggancia diretto
+ai conteggi che abbiamo già, e regge la nostra regola — lo stesso profilo si può
+rifare a parole, a significato e dai cluster, e confrontare i tre.
+
+**Contro.** Il profilo dipende da *come* abbiamo tagliato gli argomenti: cluster
+troppo scissi gonfiano le differenze, troppo grossi le nascondono — l'aggregato è
+più affidabile del singolo gruppo. E un profilo medio appiattisce il tempo: due
+Papi possono avere lo stesso profilo "totale" pur avendolo costruito in stagioni
+diverse. Va quindi letto insieme alla heatmap, non al suo posto.
+
 ## La morale
 
-Seguendo le domande una dopo l'altra si arriva sempre lì: i numeri smontano il
-titolo di giornale e fanno vedere la **continuità**. Non un Papa contro gli altri,
-ma una voce sola che cambia accento e parole su un filo che resta. In una riga:
+Non volevamo dare addosso a nessuno: volevamo capire. E per capire abbiamo
+cambiato lente di continuo — contare le parole, poi pesare il **significato**, poi
+lasciare che gli argomenti **emergessero da soli** — e a ogni salto di tecnica
+guardavamo se la risposta reggeva. Ha retto sempre. Da qualunque parte la guardi,
+viene fuori la stessa cosa: non un Papa contro gli altri, ma una voce sola che
+sposta accenti e parole su un filo che resta. In una riga:
 
 > **Francesco cambia gli accenti, non la sostanza. Continuità piena, comunismo no.**
 

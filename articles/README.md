@@ -24,6 +24,13 @@ relativi, così l'export resta autoconsistente). Con [pandoc](https://pandoc.org
 pandoc 01-di-cosa-parlano-i-papi.md -o 01-di-cosa-parlano-i-papi.pdf
 ```
 
+## Le figure
+
+In [`immagini/`](immagini/). Le figure di sintesi (continuità, "comunista",
+struttura, mandato) si **rigenerano** da [`genera_figure.py`](genera_figure.py)
+(`python genera_figure.py`), che parte dai numeri aggregati delle analisi. Le altre
+due (`temi_per_papa`, `argomenti-nel-tempo`) le producono i notebook 01 e 07.
+
 ## La regola di sempre
 
 Solo viste **aggregate** (percentuali, andamenti): nessun testo dei Papi è

@@ -125,8 +125,9 @@ sull'indice del vector database tramite il ponte `analisi/ponte.py` (vedi il
 [README di analisi](analisi/README.md)). Restano sul tavolo, per più avanti,
 dashboard interattive e data viz più ricche; per ora il formato è il notebook.
 
-Il racconto — quale storia raccontano i dati — è parte del lavoro: la prima
-sintesi "da spiegare a un amico" è nel notebook dei temi.
+Il racconto — quale storia raccontano i dati — è parte del lavoro: la sintesi
+divulgativa "da spiegare a un amico" è negli [articoli](articles/), con appendice
+tecnica per chi vuole il *come*.
 
 ## Copyright e dati: la regola del repo
 
@@ -160,23 +161,57 @@ conda env create -f setup/environment.yml && conda activate textmining-papi
 
 ## Stato
 
-Sette analisi in piedi in [`analisi/`](analisi/): temi per Papa (parole vs
+Sei notebook di analisi in [`analisi/`](analisi/): temi per Papa (parole vs
 significato, con heatmap), il metodo di ricerca (perché ibrida, perché niente
 soglie), i **topic emergenti** (KMeans + c-TF-IDF), la **struttura per famiglie**
 (la nostra ipotesi marcata chunk per chunk, coi discorsi che si mischiano), il
-**mandato dichiarato** e gli **argomenti estratti seguiti nel tempo** (07: topic
+**mandato dichiarato** e gli **argomenti estratti seguiti nel tempo** (topic
 extraction condivisa + heatmap argomento × anno). Più gli articoli divulgativi in
 [`articles/`](articles/), con appendice tecnica.
 
-Il quadro: continuità del fondo (la linea rossa liturgico-devozionale è ~80% per
-tutti) con accenti che **scorrono nel tempo**, spesso ai cambi di Papa (Santa
-Marta in Francesco, il sociale in Francesco/Leone, l'America Latina in GP2); e
-nessuna deriva dal mandato iniziale.
+## Conclusioni — abbiamo risposto?
 
-**Prossimi passi (aperti):**
-- portare i **topic nel vector database** come campo arricchito (`vdb.py
-  arricchisci`): proposto, **non ancora implementato**;
-- ripulire le **etichette** dei topic (ora parole-chiave grezze);
-- isolare la **direzione distintiva** di ogni mandato (nota nel notebook 05);
-- valutare una tecnica di **frame morali/valoriali** (language-based preferences /
-  LENS) accanto alla topic extraction — da mettere a fuoco.
+Sì, alle domande di partenza:
+- **Di cosa parlano?** Per ~80% della stessa cosa (la linea rossa
+  liturgico-devozionale), identica per i quattro; i temi "da giornale" stanno nel
+  20% restante.
+- **C'è continuità?** Sì, schiacciante sui temi dominanti — e lo dicono **tre lenti
+  concordi** (parole, significato, topic emergenti). Ma non immobilità: gli accenti
+  **scorrono nel tempo**, spesso ai cambi di Papa.
+- **Francesco è comunista?** No: accentua poveri/migranti (è il suo timbro), ma
+  sono temi minori e di tutti; sul lavoro/operai il primo è Giovanni Paolo II.
+  Dottrina sociale, non comunismo.
+- **Hanno tenuto il mandato?** Sì: fedeltà piatta all'omelia inaugurale per tutto
+  il pontificato, nessuna deriva.
+
+## Pro e contro del metodo
+
+**Pro:** locale e gratis (niente API, i testi non escono dalla macchina); embedding
+multilingue che colgono il *senso*, non solo le parole; doppio controllo
+parole+significato → robustezza; viste solo aggregate → copyright al sicuro; tutto
+rieseguibile dai notebook.
+
+**Contro / limiti:** le similarità del modello non sono calibrate (si leggono in
+relativo, mai con soglie); la lente "famiglie" è grossa (la devozione attira quasi
+tutto); le etichette dei topic emergenti sono parole-chiave grezze; solo testi *da
+Papa* (niente confronto pre/post elezione); su Windows il `KMeans` può crashare per
+il conflitto OpenMP/MKL (serve un ambiente "sano").
+
+## Prossimi passi (aperti)
+
+Nei prossimi giorni, a mente fredda: **analisi migliori e percorsi più solidi**.
+1. **Ambiente sano** (numpy non-MKL / pip-only) così `KMeans` e i grafici girano
+   senza trucchi — sblocca il resto.
+2. **Topic modeling migliore**: BERTopic sugli stessi embedding (HDBSCAN, niente
+   *k* imposto, topic-over-time nativo, etichette migliori), con NMF "a parole"
+   come controprova. (LDA / NTM scartati — vedi nota in fondo.)
+3. **Topic nel vector database** come campo arricchito (`vdb.py arricchisci`, campo
+   `famiglia`/topic): **proposto, non ancora implementato** — il "come" è tracciato
+   nel repo del vector database (`doc/architettura.md`).
+4. **Profilo di argomenti per Papa** da mettere a confronto; **direzione
+   distintiva** di ogni mandato; **frame morali/valoriali**.
+
+> Perché BERTopic e non LDA/NTM: il progetto si regge sul *significato* (embedding);
+> LDA/NMF sono "a parole" (bag-of-words, ciechi ai sinonimi), NTM è il più pesante e
+> fragile. BERTopic riusa i nostri embedding ed è la versione principiata di ciò che
+> già facciamo. NMF resta utile solo come controprova a parole.
