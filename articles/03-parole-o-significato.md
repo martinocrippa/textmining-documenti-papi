@@ -26,6 +26,11 @@ Il secondo coglie il **significato** delle frasi, non le lettere: per lui "casa
 comune", "custodia del creato" e "ambiente" stanno vicine perché *vogliono dire*
 la stessa cosa. È la tecnica su cui si reggono quasi tutte le nostre analisi.
 
+> **Come, tecnicamente.** "A parole" = cercare le stringhe (es. `ambiente`,
+> `ecologia`). "A significato" = trasformare ogni frase in un *vettore* che
+> avvicina i sinonimi, così "casa comune" finisce vicino ad "ambiente" anche senza
+> parole in comune. Noi usiamo i due **insieme**.
+
 ## La risposta
 
 Il significato vince dove le parole sono cieche (i sinonimi, le perifrasi). Ma la

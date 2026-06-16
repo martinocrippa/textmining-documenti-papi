@@ -26,6 +26,11 @@ anno, abbiamo misurato quanto i discorsi di quell'anno **somigliano** a
 quell'impronta. Una linea che resta alta e dritta = fedeltà; una linea che scende
 = ci si è allontanati.[^mandato]
 
+> **Come, tecnicamente.** Dell'omelia inaugurale facciamo un *vettore medio* — la
+> sua impronta di senso. Ogni anno misuriamo quanto i discorsi di quell'anno
+> somigliano a quell'impronta: la linea del grafico è quella somiglianza, anno per
+> anno.
+
 ## La risposta
 
 Il grafico parla da solo: ogni linea è **piatta**. Non c'è deriva. Giovanni Paolo

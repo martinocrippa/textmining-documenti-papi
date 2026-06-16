@@ -28,6 +28,11 @@ pontificato; l'attualità) e poi, per **significato**, abbiamo assegnato ogni
 *passaggio* dei discorsi alla famiglia più affine. Non i discorsi interi: i pezzi
 — perché un'omelia mischia liturgia e attualità nella stessa pagina.[^struttura]
 
+> **Come, tecnicamente.** Ogni passaggio diventa un *vettore* — una sequenza di
+> numeri che ne cattura il senso. Lo confrontiamo con sei "frasi-ancora" (una per
+> famiglia) e gli diamo la più vicina. Per **significato**, non per parole; e
+> nessuna soglia, solo "qual è la più vicina".
+
 **La risposta.** Circa l'**80% di tutto è la stessa cosa**, per tutti e quattro:
 Dio, Gesù, Maria, il Vangelo, i sacramenti — la *lunga linea rossa*. I temi "da
 prima pagina" vivono nel **20% che resta**.
@@ -47,6 +52,11 @@ dominanti **a significato** (il programma capisce il senso delle frasi) e
 **ricontrollato a parole** (le parole chiave secche). E, come controprova, abbiamo
 lasciato che i temi **emergessero da soli** dai testi, raggruppando i discorsi per
 vicinanza di senso senza suggerirgliene nessuno.[^continuita]
+
+> **Come, tecnicamente.** Tre lenti sulla stessa cosa: conteggio per *parole
+> chiave*; conteggio per *significato* (gli stessi vettori di senso); e
+> *raggruppamento* automatico dei discorsi simili, senza temi imposti. Se tutte e
+> tre dicono lo stesso, è solido.
 
 **La risposta.** **Continuità schiacciante.** I temi che dominano — parlare di Dio
 e del Vangelo, della pace, della famiglia — tornano quasi alle stesse percentuali
@@ -68,6 +78,9 @@ fissazione? E basta questo a fare di un Papa un comunista?
 
 **In numeri.** Stesso conteggio dei temi, puntato sui temi "sociali" — poveri,
 migranti, giustizia, lavoro — e confrontato fra i quattro.[^sociali]
+
+> **Come, tecnicamente.** Lo stesso conteggio di prima (parole *e* significato),
+> ristretto ai temi sociali e messo a confronto fra i quattro Papi alla pari.
 
 **La risposta.** Sì, Francesco **accentua** davvero poveri, migranti e
 disuguaglianze: è il suo timbro. Ma due cose raddrizzano il titolo. Primo: sono
