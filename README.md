@@ -160,10 +160,12 @@ conda env create -f setup/environment.yml && conda activate textmining-papi
 
 ## Stato
 
-Tre analisi in piedi in [`analisi/`](analisi/): temi per Papa (parole vs
+Cinque analisi in piedi in [`analisi/`](analisi/): temi per Papa (parole vs
 significato, con heatmap), il metodo di ricerca (perché ibrida, perché niente
-soglie) e i primi **topic emergenti** (KMeans sugli embedding + c-TF-IDF).
-Rispondono già alle due domande di partenza — *di cosa parlano* e *se c'è
-continuità* — e i topic confermano la struttura attesa (linea rossa liturgica +
-strato "dovuto" + firme dei singoli). I passi successivi: temi **al netto del
-dovuto** (ruolo/liturgia) e il legame coi **mandati dichiarati** nel tempo.
+soglie), i **topic emergenti** (KMeans + c-TF-IDF), la **struttura per famiglie**
+(la nostra ipotesi marcata chunk per chunk, coi discorsi che si mischiano) e il
+**mandato dichiarato** nel tempo. Il quadro: continuità schiacciante (la linea
+rossa liturgico-devozionale è ~80% per tutti), differenze negli accenti
+(attualità per Francesco/Leone, viaggi per GP2), e nessuna deriva dal mandato
+iniziale. Passo successivo: isolare la **direzione distintiva** di ogni mandato e
+seguirla nel tempo (vedi nota nel notebook 05).
