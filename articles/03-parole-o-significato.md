@@ -61,3 +61,9 @@ dichiara di *non* poter dire:
 
 In fondo è tutto qui: contare bene, con due occhi invece di uno, e dire fino a
 dove arrivano i numeri. Il resto — la storia che raccontano — viene da sé.
+
+---
+
+*Il dettaglio di ogni calcolo — affermazione per affermazione — è
+nell'[Appendice tecnica](appendice-tecnica.md), che fa da ponte verso i notebook
+con il codice rieseguibile.*

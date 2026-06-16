@@ -28,7 +28,7 @@ di attualità nella stessa pagina (succede, in media, in più di metà dei testi
 ![Di cosa parlano: la struttura per famiglie](immagini/sintesi-struttura.png)
 
 Il risultato è netto e un po' spiazzante: **circa l'80% di tutto è la stessa
-cosa**, per tutti e quattro. Dio, Gesù, Maria, il Vangelo, i sacramenti — la
+cosa**, per tutti e quattro.[^struttura] Dio, Gesù, Maria, il Vangelo, i sacramenti — la
 chiameremo *la lunga linea rossa*. È il fondo comune, identico da un Papa
 all'altro. I temi "da prima pagina" vivono tutti nel **20% che resta**: ed è lì,
 in quella fascia sottile, che si vedono le differenze. L'attualità pesa di più in
@@ -43,7 +43,7 @@ rotta"?
 
 I tre temi che dominano — parlare di Dio e del Vangelo, della pace, della famiglia
 — tornano **uguali per tutti e quattro**, quasi alle stesse percentuali: Dio e
-Vangelo intorno all'85% dei documenti, la pace e la famiglia intorno alla metà. Su
+Vangelo intorno all'85% dei documenti, la pace e la famiglia intorno alla metà.[^temi] Su
 questo i Papi sono **la stessa voce**. Francesco non è un corpo estraneo arrivato
 a cambiare le carte: cambia gli **accenti**, non la sostanza.
 
@@ -59,12 +59,12 @@ Ma due cose raddrizzano subito il titolo da bar. La prima: sono temi **minori**
 rispetto a Dio, alla pace, alla famiglia — e **li trattano tutti**. È la dottrina
 sociale della Chiesa, vecchia di oltre un secolo, non un'invenzione di sinistra.
 La seconda è la più bella: guardate la colonna del **lavoro e degli operai**. Il
-primo non è Francesco — è **Giovanni Paolo II**, il doppio degli altri. Cioè
+primo non è Francesco — è **Giovanni Paolo II**, il doppio degli altri.[^sociali] Cioè
 proprio il Papa che ha contribuito a far *cadere* il comunismo. Parlare di poveri
 e di operai, evidentemente, non rende comunisti.
 
 Stessa storia per l'ambiente, l'altro cavallo di battaglia dei titoli: ne parlano
-tutti più o meno allo stesso modo. Quello che è *davvero* di Francesco non è il
+tutti più o meno allo stesso modo.[^ambiente] Quello che è *davvero* di Francesco non è il
 tema, è il **modo di dirlo** — la formula "casa comune" della *Laudato si'*. Il
 tema è di tutti; la frase è la sua firma.
 
@@ -81,3 +81,18 @@ accento e parole su un filo che resta lo stesso. In una riga:
 *Una nota onesta. Qui abbiamo guardato solo conteggi e percentuali, mai
 ripubblicato i testi (sono dei loro autori). È uno strumento ancora giovane, e
 qualche numero andrà limato — ma la direzione si vede, ed è solida.*
+
+[^struttura]: Ogni *passaggio* dei discorsi è assegnato, per **significato** (non
+per parole), alla famiglia di argomenti più vicina fra sei; la quota di passaggi
+per famiglia dà la composizione. Dettaglio in *Appendice tecnica*, §1.
+
+[^temi]: Conteggio dei temi fatto **sia a parole sia a significato**: i due metodi
+danno lo stesso quadro. Il `lift` misura quanto un Papa sta sopra o sotto la media
+dei quattro. *Appendice tecnica*, §2.
+
+[^sociali]: Stesso conteggio del tema precedente, sui temi sociali. Che il lavoro
+sia primo in Giovanni Paolo II vale a parole e a significato. *Appendice tecnica*,
+§2.
+
+[^ambiente]: Quota di documenti sull'ambiente quasi identica per i quattro; la
+differenza è la **frase** "casa comune", non il tema. *Appendice tecnica*, §3.

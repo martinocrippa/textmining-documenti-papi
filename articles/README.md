@@ -10,6 +10,10 @@ notebook in [`../analisi/`](../analisi/).
 | [Di cosa parlano davvero i Papi](01-di-cosa-parlano-i-papi.md) | La domanda grande: continuità, accenti, e quel "comunista" da bar. |
 | [Hanno mantenuto le promesse?](02-hanno-mantenuto-le-promesse.md) | Il programma del primo giorno regge per tutto il pontificato? |
 | [Parole o significato](03-parole-o-significato.md) | Come si fa a misurare "di cosa parla" un Papa — senza barare. |
+| [Appendice tecnica](appendice-tecnica.md) | Il *come* di ogni numero: affermazione per affermazione, col metodo in chiaro. Ponte verso i notebook. |
+
+Negli articoli, le note a piè di pagina rimandano alla sezione giusta
+dell'appendice (e quindi al notebook con il codice).
 
 ## Esportare in PDF
 

@@ -22,7 +22,7 @@ Abbiamo preso l'omelia inaugurale di ciascuno e l'abbiamo usata come **pietra di
 paragone**. Poi, anno per anno, abbiamo chiesto al programma: *quanto i discorsi
 di quest'anno assomigliano, nel contenuto, a quello che avevi promesso il primo
 giorno?* Più la risposta resta alta e costante, più quel Papa è rimasto fedele
-alla sua linea. Se calasse col tempo, vorrebbe dire che si è allontanato.
+alla sua linea. Se calasse col tempo, vorrebbe dire che si è allontanato.[^mandato]
 
 ![La fedeltà al discorso inaugurale, anno per anno](immagini/sintesi-mandato.png)
 
@@ -57,3 +57,8 @@ Tolto quel limite, la risposta è limpida e perfino rassicurante:
 
 *Anche qui, solo misure d'insieme — quanto i testi si somigliano, in media, anno
 per anno. Nessun discorso è riprodotto: restano dei loro autori.*
+
+[^mandato]: La "pietra di paragone" è il **baricentro di significato** dell'omelia
+di inizio pontificato (tutto a embedding); ogni anno si misura la somiglianza
+media dei discorsi a quel baricentro. Conta la **pendenza** della linea, non
+l'altezza. *Appendice tecnica*, §5.
