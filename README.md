@@ -70,12 +70,12 @@ emersi (topic) ai **mandati dichiarati** dei pontificati.
 
 ### Temi da aggiungere (e come misurarli)
 
-La piccola esplorazione in [`prove/esplora_temi.py`](prove/esplora_temi.py) gira
-su una lista di temi a **parole chiave** ereditata dal check dell'ingestion. Un
-primo sguardo suggerisce che è proprio lì — nei temi distintivi — che un Papa
-"porta il suo". Ne mancano alcuni che vale la pena indagare: **valore della vita
-umana**, **aborto**, **dignità/valore dell'uomo**, **intelligenza artificiale**,
-**cambiamento della Chiesa**.
+La prima analisi vera è in [`analisi/01-temi-per-papa.ipynb`](analisi/01-temi-per-papa.ipynb):
+gira sui temi sull'**indice** del vector database, confrontando **parole chiave**
+e **significato** (embedding), inclusi i temi nuovi — **valore della vita umana**,
+**aborto**, **dignità/valore dell'uomo**, **intelligenza artificiale**,
+**cambiamento della Chiesa**. È proprio lì — nei temi distintivi — che un Papa
+"porta il suo".
 
 Due avvertenze, che dicono *come* vanno misurati:
 - **a parole chiave si misurano male**: "valore della vita", "cambiamento della
@@ -117,18 +117,16 @@ Output naturale: una **serie temporale per Papa** dei suoi temi-mandato (con la
 solita cautela sul "dovuto" da ruolo/liturgia). È un confronto *dentro* il
 pontificato — quello che il corpus permette davvero.
 
-## Forma delle analisi (da definire)
+## Forma delle analisi
 
-Non è ancora deciso *come* verranno fatte ed esposte le analisi. Le ipotesi
-sul tavolo:
+Le analisi vivono in [`analisi/`](analisi/) come **notebook**, una per domanda:
+codice rieseguibile + racconto in markdown + figure aggregate. Si appoggiano
+sull'indice del vector database tramite il ponte `analisi/ponte.py` (vedi il
+[README di analisi](analisi/README.md)). Restano sul tavolo, per più avanti,
+dashboard interattive e data viz più ricche; per ora il formato è il notebook.
 
-- analisi **one-shot** (script o notebook che producono un risultato);
-- **dashboard** interattive;
-- **data visualization** e grafici;
-- **notebook** o documenti **markdown** narrativi.
-
-Il racconto — quale storia raccontano i dati, e in che forma — è parte del
-lavoro da fare, non un dato di partenza.
+Il racconto — quale storia raccontano i dati — è parte del lavoro: la prima
+sintesi "da spiegare a un amico" è nel notebook dei temi.
 
 ## Copyright e dati: la regola del repo
 
@@ -162,6 +160,8 @@ conda env create -f setup/environment.yml && conda activate textmining-papi
 
 ## Stato
 
-Scaffold iniziale: solo le domande e la direzione, più l'ambiente di base. Il
-codice delle analisi arriverà man mano che i dati arricchiti del vector database
-saranno disponibili.
+Prime analisi in piedi in [`analisi/`](analisi/): temi per Papa (parole vs
+significato, con heatmap) e il metodo di ricerca (perché ibrida, perché niente
+soglie). Rispondono già alle due domande di partenza — *di cosa parlano* e *se
+c'è continuità*. Il passo successivo è la **topic extraction** (temi *emergenti*
+dai testi, non solo da liste di parole) e il legame coi mandati dichiarati.
