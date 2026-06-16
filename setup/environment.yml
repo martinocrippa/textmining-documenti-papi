@@ -8,6 +8,7 @@ dependencies:
   - pyarrow>=14
   - matplotlib>=3.7
   - seaborn>=0.13            # heatmap delle analisi
+  - scikit-learn>=1.3        # KMeans + TF-IDF per i topic emergenti (notebook 03)
   - py3langid>=0.3           # importato da vdb (repo gemello)
   - jupyter
   - pip

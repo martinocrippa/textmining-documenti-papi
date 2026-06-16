@@ -160,8 +160,10 @@ conda env create -f setup/environment.yml && conda activate textmining-papi
 
 ## Stato
 
-Prime analisi in piedi in [`analisi/`](analisi/): temi per Papa (parole vs
-significato, con heatmap) e il metodo di ricerca (perché ibrida, perché niente
-soglie). Rispondono già alle due domande di partenza — *di cosa parlano* e *se
-c'è continuità*. Il passo successivo è la **topic extraction** (temi *emergenti*
-dai testi, non solo da liste di parole) e il legame coi mandati dichiarati.
+Tre analisi in piedi in [`analisi/`](analisi/): temi per Papa (parole vs
+significato, con heatmap), il metodo di ricerca (perché ibrida, perché niente
+soglie) e i primi **topic emergenti** (KMeans sugli embedding + c-TF-IDF).
+Rispondono già alle due domande di partenza — *di cosa parlano* e *se c'è
+continuità* — e i topic confermano la struttura attesa (linea rossa liturgica +
+strato "dovuto" + firme dei singoli). I passi successivi: temi **al netto del
+dovuto** (ruolo/liturgia) e il legame coi **mandati dichiarati** nel tempo.

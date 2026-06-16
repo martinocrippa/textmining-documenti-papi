@@ -10,6 +10,7 @@ sull'indice LanceDB del *vector database* (repo gemello) tramite il ponte
 |---|---|---|
 | [`01-temi-per-papa.ipynb`](01-temi-per-papa.ipynb) | Di cosa parlano i Papi? C'è continuità? Francesco è comunista? | Temi per Papa, parole vs significato, con heatmap. Continuità piena, accenti diversi, comunismo no. |
 | [`02-parole-vs-significato.ipynb`](02-parole-vs-significato.ipynb) | Come si misura un tema: parole o significato? E con che metodo? | Perché la ricerca è **ibrida** e perché si confrontano distribuzioni e non soglie. Più il footprint calcio/ambiente. |
+| [`03-topic-emergenti.ipynb`](03-topic-emergenti.ipynb) | E se i temi li lasciamo **emergere** dai dati invece di sceglierli? | KMeans sugli embedding + c-TF-IDF: emergono la linea rossa liturgica, lo strato "dovuto" dal ruolo e le firme dei singoli Papi. Primo passo della topic extraction. |
 
 ## Come si eseguono
 
@@ -18,13 +19,17 @@ sull'indice LanceDB del *vector database* (repo gemello) tramite il ponte
    cercano il repo gemello accanto a questo; per un percorso diverso imposta la
    variabile d'ambiente `VDB_REPO`.
 2. **Ambiente** con le librerie delle analisi (`sentence-transformers`,
-   `lancedb`, `torch`, `seaborn`, `jupyter`): vedi [`../setup/`](../setup/).
+   `lancedb`, `torch`, `seaborn`, `scikit-learn`, `jupyter`): vedi
+   [`../setup/`](../setup/).
 3. Apri i notebook (`jupyter lab` o l'estensione dell'editor) e *Run All*. Il
    calcolo embedding gira sulla CPU: un paio di minuti il primo notebook.
 
-> Su Windows il prodotto matrice-vettore va fatto in **torch** (non numpy): dopo
-> aver caricato torch, il BLAS di numpy può far crashare il processo (conflitto
-> MKL). I notebook lo fanno già così.
+> **Nota Windows / OpenMP.** Su alcuni env conda con MKL + torch c'è un doppio
+> `libiomp5md.dll` che fa crashare il codice nativo pesante: i notebook 01/02
+> fanno il prodotto matrice-vettore in **torch** (non numpy) apposta; il 03 è
+> **torch-free** (legge solo i vettori) ma `KMeans` di scikit-learn usa OpenMP e
+> può cadere lo stesso. Se càpita, gira in un ambiente "sano" (numpy non-MKL, es.
+> `conda install nomkl`, o un env pip-only).
 
 ## La regola del repo
 
