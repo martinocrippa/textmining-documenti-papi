@@ -126,7 +126,7 @@ sull'indice del vector database tramite il ponte `analisi/ponte.py` (vedi il
 dashboard interattive e data viz più ricche; per ora il formato è il notebook.
 
 Il racconto — quale storia raccontano i dati — è parte del lavoro: la sintesi
-divulgativa "da spiegare a un amico" è negli [articoli](articles/), con appendice
+divulgativa "da spiegare a un amico" è negli [articoli](docs/), con appendice
 tecnica per chi vuole il *come*.
 
 ## Copyright e dati: la regola del repo
@@ -167,7 +167,7 @@ soglie), i **topic emergenti** (KMeans + c-TF-IDF), la **struttura per famiglie*
 (la nostra ipotesi marcata chunk per chunk, coi discorsi che si mischiano), il
 **mandato dichiarato** e gli **argomenti estratti seguiti nel tempo** (topic
 extraction condivisa + heatmap argomento × anno). Più gli articoli divulgativi in
-[`articles/`](articles/), con appendice tecnica.
+[`docs/`](docs/), con appendice tecnica.
 
 ## Conclusioni — abbiamo risposto?
 

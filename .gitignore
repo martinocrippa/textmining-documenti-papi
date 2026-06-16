@@ -16,3 +16,4 @@ indice/
 # Le viste aggregate "buone" da conservare vanno committate esplicitamente.
 output/
 *.parquet
+*.pdf                          # export degli articoli (derivati, si rigenerano con pandoc)

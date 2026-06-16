@@ -126,43 +126,39 @@ Stessa storia per l'ambiente: ne parlano tutti più o meno allo stesso modo. Que
 che è *davvero* di Francesco non è il tema, è il **modo di dirlo** — la formula
 "casa comune" della *Laudato si'*.[^ambiente]
 
-## E nel tempo? Il filo resta, gli accenti scorrono
+## E nel tempo? Il fondo resta, gli accenti si spostano
 
-C'è un ultimo modo di guardare, il più onesto: non le nostre famiglie, ma gli
-argomenti che **emergono da soli** dai testi — e seguirli **anno per anno**, lungo
-tutti e quattro i pontificati.
+Un ultimo taglio, il più severo. Togliamo il fondo — liturgia, fede e devozione,
+che già sappiamo continuo per tutti — e teniamo solo il resto: gli argomenti che
+restano quando levi la parte dovuta dal ruolo. Quelli li lasciamo emergere dai
+dati, gli diamo un nome leggendoli, e li contiamo anno per anno.
 
-![Gli argomenti estratti, seguiti nel tempo](immagini/argomenti-nel-tempo.png)
+![Gli argomenti (oltre liturgia e fede) seguiti nel tempo](immagini/argomenti-nel-tempo.png)
 
-> **Come, tecnicamente.** Un solo **KMeans** sui vettori e5 *condiviso* tra tutti i
-> Papi (così l'argomento *k* vuol dire la stessa cosa per ognuno; nomi dei gruppi
-> per c-TF-IDF), poi si contano i passaggi di ogni argomento **anno per anno**.
-> Niente temi imposti da noi: emergono e si contano.
+> **Come, tecnicamente.** Si tengono i soli passaggi non liturgici e non
+> devozionali, si raggruppano per significato (un KMeans condiviso tra i quattro
+> Papi, così un argomento vale lo stesso per tutti) e a ogni gruppo si dà un nome
+> leggendone i passaggi tipici. Poi: la quota di ogni argomento, anno per anno.
 
-Si legge così: in orizzontale gli anni, dal 1978 a oggi; ogni riga è un argomento;
-più una casella è scura, più di quell'argomento si è parlato quell'anno. Le tre
-righe verticali azzurre sono i cambi di Papa (2005 Benedetto, 2013 Francesco, 2025
-Leone): tienile d'occhio, perché è lì che succedono le cose.
+Si legge così: ogni riga è un argomento, ogni colonna un anno, più scuro vuol dire
+che se ne è parlato di più; le righe azzurre sono i cambi di Papa.
 
-Il quadro non è "tutto uguale" né "tutto cambia": è **continuità del fondo e
-movimento negli accenti**. Alcune righe sono colorate in modo uniforme per mezzo
-secolo, da sinistra a destra — il Vangelo, l'ecumenismo, i sacramenti: il filo che
-non si spezza, chiunque sia il Papa. Altre invece si accendono a **ondate**, e
-quasi sempre l'ondata parte di netto in corrispondenza di una riga azzurra — cioè
-appena cambia il Papa. Si vede a occhio: l'America Latina (le visite dei vescovi,
-Taizé) è densa negli anni di Giovanni Paolo II e si schiarisce dopo; *Santa Marta*
-— le omelie quotidiane di Francesco — è una macchia scura che prima del 2013 non
-esiste proprio, è bianca, e poi compare di colpo; il filone sociale — disarmo,
-agricoltura, migranti — si accende con Francesco e resta acceso con Leone, fino
-all'ultima colonna.[^tempo]
+Due avvertenze prima della storia. Anche qui metà degli argomenti è
+**istituzionale** — visite dei vescovi, udienze, viaggi, diplomazia: roba dettata
+dal ruolo, non scelta. E il grosso del testo è di Giovanni Paolo II, che ha scritto
+molto più degli altri: contano le quote, non i numeri secchi.
 
-Ecco perché conviene non tirare conclusioni affrettate: la continuità è vera, ma
-non è immobilità. È una voce sola che, nel tempo, sposta gli accenti.
+Detto questo, gli argomenti di contenuto **si muovono, quasi sempre al cambio di
+Papa**. Le visite *ad limina* e la Polonia sono fitte negli anni di Giovanni Paolo
+II e si schiariscono dopo. **Povertà e lavoro**, **fame e agricoltura** (la FAO) e
+il registro **"a braccio" di Francesco** — interviste, dialoghi — si accendono dal
+2013 e restano con Leone. **Pace e disarmo** va a tratti, segue le guerre del
+momento. Il fondo che abbiamo tolto, invece, non si muove: è la continuità degli
+altri capitoli.[^tempo]
 
-Una cautela, però, perché qui cambiamo di nuovo strumento e questo è il più grezzo
-dei tre: la heatmap ci dice **che** un argomento va a ondate, non ancora **cosa**
-contiene di preciso quell'ondata. Per dirlo servirà scendere nel dettaglio, una
-macchia alla volta — ed è lavoro per le analisi che verranno.
+Una cautela: la heatmap dice *che* un argomento va a ondate, non ancora *cosa*
+contiene di preciso quell'ondata. Per quello serve scendere nel dettaglio, una
+macchia alla volta — lavoro per le analisi che verranno.
 
 ## Il prossimo passo: un profilo per ogni Papa
 
@@ -229,7 +225,6 @@ differenza è la **frase** "casa comune", non il tema. *Appendice tecnica*, §3.
 significato, senza temi imposti, e gli argomenti emergono da soli — confermando le
 famiglie proposte da noi. *Appendice tecnica*, §4.
 
-[^tempo]: Stessi argomenti estratti dal dato, ma con un **unico raggruppamento
-condiviso** tra i Papi (così sono confrontabili) e contati **per anno**: la
-heatmap mostra continuità (righe piene) e ondate (macchie). *Appendice tecnica*,
-§4 e notebook 07.
+[^tempo]: Pipeline: marcatura nelle 6 famiglie → si tiene il **non-core** (fuori da
+liturgia e fede) → raggruppamento condiviso tra i Papi → nome a ogni gruppo
+leggendone i passaggi tipici → quota per anno. *Appendice tecnica*, §4 e notebook 07.

@@ -91,11 +91,14 @@ soli la linea rossa liturgica, lo strato "dovuto" dal ruolo (vescovi, diplomatic
 accademie, viaggi) e le firme dei singoli — conferma indipendente di ciò che le
 famiglie del §1 dicevano.
 
-Il notebook 07 fa il passo in più: un **unico raggruppamento condiviso** su tutti
-i Papi (così l'argomento *k* è confrontabile tra pontificati), ogni passaggio
-riceve la sua etichetta-argomento, e si **contano le etichette per anno**. La
-heatmap argomento × anno mostra continuità (righe piene) e ondate (macchie),
-spesso ai cambi di Papa. È topic extraction "vera", non somiglianza a temi nostri.
+Il notebook 07 mette a punto la pipeline: (1) si **marca** ogni passaggio nelle 6
+famiglie (campo `famiglia`, da `vdb.py arricchisci`); (2) si tiene il **non-core**
+(fuori da liturgia e fede — il ~20% dove si gioca la differenza) e lo si
+**raggruppa** con un KMeans condiviso tra i Papi; (3) a ogni gruppo si dà un nome
+**leggibile** leggendone i passaggi rappresentativi (le parole grezze del TF-IDF
+erano illeggibili). Poi quota per anno → heatmap: righe piene = continui, macchie =
+a ondate, spesso ai cambi di Papa. Metà del non-core resta comunque istituzionale
+(vescovi, udienze, viaggi) e il volume pende su Giovanni Paolo II.
 
 ## 5. «Hanno tenuto il mandato» (fedeltà nel tempo)
 

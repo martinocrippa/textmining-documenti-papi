@@ -16,7 +16,7 @@ sull'indice LanceDB del *vector database* (repo gemello) tramite il ponte
 | [`07-argomenti-nel-tempo.ipynb`](07-argomenti-nel-tempo.ipynb) | Gli argomenti **estratti** dal dato, seguiti nel tempo (dentro e tra i Papi) | Topic extraction vera (modello condiviso) + heatmap argomento × anno: continuità del fondo e ondate legate ai Papi (Santa Marta di Francesco, il sociale che sale, l'America Latina di GP2 che cala). |
 
 > La **sintesi divulgativa** delle conclusioni (per un pubblico non tecnico) è in
-> [`../articles/`](../articles/), con appendice tecnica. (Il vecchio notebook
+> [`../docs/`](../docs/), con appendice tecnica. (Il vecchio notebook
 > `06-sintesi` è confluito lì.)
 
 ## Come si eseguono

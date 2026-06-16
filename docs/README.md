@@ -1,4 +1,4 @@
-# articles/ — gli articoli divulgativi
+# docs/ — gli articoli divulgativi
 
 Le analisi raccontate come **articoli da rivista**, per chi è curioso ma non
 mastica statistica. Niente gergo tecnico: i numeri restano (le percentuali si
