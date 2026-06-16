@@ -10,52 +10,52 @@ Ogni conclusione vale quanto il metodo che c'è sotto. Quindi una pagina la
 dedichiamo proprio a quello: *come* abbiamo contato. È più semplice di quanto
 sembri, e capirlo aiuta a fidarsi dei numeri.
 
-## Il problema delle parole
+## La domanda
 
-Il modo ovvio sarebbe cercare le parole. Vuoi sapere chi parla di ambiente? Conti
-quante volte compaiono "ambiente", "ecologia", "clima". Funziona… fino a un certo
-punto. Perché quando Francesco scrive **"casa comune"** sta parlando di ambiente
-**senza usare la parola ambiente**. Le parole, da sole, quel passaggio se lo
-perdono.
+Come si misura "di cosa parla" un Papa, su venticinquemila testi, senza leggerli
+tutti a mano e senza piegare i numeri a ciò che volevamo sentirci dire?
 
-Allora abbiamo usato anche un secondo modo: un programma che coglie il
-**significato** delle frasi, non solo le lettere. Per lui "casa comune", "custodia
-del creato" e "ambiente" stanno vicine perché *vogliono dire* la stessa cosa,
-anche se sono parole diverse.
+## In numeri: due modi
 
-## Due strade, stessa meta
+Il primo è ovvio: **cercare le parole**. Vuoi sapere chi parla di ambiente? Conti
+"ambiente", "ecologia", "clima". Funziona… fino a un certo punto — perché quando
+Francesco scrive **"casa comune"** parla di ambiente *senza usare la parola*, e le
+parole quel passaggio se lo perdono.
 
-La domanda a quel punto è: e se i due modi dessero risultati diversi? Quale
-crediamo?
+Il secondo coglie il **significato** delle frasi, non le lettere: per lui "casa
+comune", "custodia del creato" e "ambiente" stanno vicine perché *vogliono dire*
+la stessa cosa. È la tecnica su cui si reggono quasi tutte le nostre analisi.
 
-La cosa bella è che, sui grandi numeri, **vanno d'accordo**. Misurato a parole o a
-significato, il quadro di chi parla di cosa **non cambia**: la continuità resta
-continuità, gli accenti di Francesco restano gli stessi. È la prova che il
-risultato è solido — non un effetto del metodo scelto. Curioso: i due modi pescano
-spesso documenti *diversi* (il significato trova i testi senza la parola; le parole
-prendono qualche aggancio in più), eppure il bilancio finale combacia.
+## La risposta
 
-Per questo, quando abbiamo dovuto cercare un passaggio dentro i discorsi, abbiamo
-usato i **due insieme** — le parole *e* il significato. Uno solo lascerebbe buchi;
-insieme si coprono a vicenda.
+Il significato vince dove le parole sono cieche (i sinonimi, le perifrasi). Ma la
+prova di solidità è un'altra: sui grandi numeri, i due metodi **vanno d'accordo**.
+Misurato a parole o a significato, il quadro di chi parla di cosa **non cambia** —
+la continuità resta continuità, gli accenti di Francesco restano gli stessi.
+Quando il metodo grezzo e quello fine dicono la stessa cosa, vuol dire che il
+risultato non è un trucco del metodo. Per questo, quando cerchiamo un passaggio,
+usiamo i **due insieme**: uno solo lascerebbe buchi.
 
-## Una regola che ci siamo dati
+## La domanda che ne nasce
 
-Una tentazione andava evitata: mettere una **soglia** e dire "sopra questo livello
-parla del tema, sotto no". Sembra comodo, ma non funziona — il livello giusto per
-un tema è quello sbagliato per un altro, e si finisce a forzare i numeri. Così
-abbiamo preferito **confrontare** i Papi tra loro, a parità di condizioni, invece
-di etichettare ogni singolo discorso. Niente bilancino, solo confronti onesti.
+E allora, già che il programma capisce il senso: non potremmo metterci una
+**soglia** e dire "sopra questo livello parla del tema, sotto no"? Sarebbe comodo.
 
-## Cosa non abbiamo fatto (apposta)
+## Come i dati rispondono
 
-E un paio di onestà finali, perché un metodo serio si vede anche da quello che
-dichiara di *non* poter dire:
+No, e qui sta una scelta importante. Il "livello" non è una temperatura: il valore
+giusto per un tema è quello sbagliato per un altro, e mettere una soglia significa
+**forzare i numeri**. Così abbiamo preferito **confrontare** i Papi tra loro, a
+parità di condizioni, invece di etichettare ogni singolo discorso. Niente
+bilancino, solo confronti onesti.
 
-- **Non ripubblichiamo i testi.** Tutto quello che si vede sono conteggi, medie,
-  andamenti: viste d'insieme, mai i documenti (che restano dei loro autori).
-- **Guardiamo solo i testi da Papa.** Non quelli di prima, da cardinale. Quindi
-  parliamo di coerenza *dentro* un pontificato, non di un "prima e dopo".
+E un paio di onestà finali — un metodo serio si vede anche da quello che dichiara
+di *non* poter dire:
+
+- **Non ripubblichiamo i testi.** Solo conteggi, medie, andamenti: viste
+  d'insieme, mai i documenti (che restano dei loro autori).
+- **Guardiamo solo i testi da Papa.** Non quelli di prima, da cardinale: parliamo
+  di coerenza *dentro* un pontificato, non di un "prima e dopo".
 - **È uno strumento giovane.** Qualche numero andrà limato, qualche etichetta
   affinata. Ma la direzione, su tutte le domande, si vede chiara.
 
