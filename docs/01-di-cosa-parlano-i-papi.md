@@ -1,128 +1,132 @@
 # Di cosa parlano i Papi
 
-*Venticinquemila discorsi di quattro Papi, messi in fila e contati — per
-rispondere coi numeri, e non con le impressioni, alle domande che ci si fa tra
-amici.*
+*Quello che dicono i giornali, messo a confronto con quello che dicono i loro testi
+— quattro Papi, venticinquemila discorsi, contati.*
 
 ---
 
-Su Francesco gira una narrazione fissa, quella dei giornali: è comunista, ha rotto
-con i Papi di prima, parla solo di migranti. Sono le stesse cose che ci si dice tra
-amici, di solito a colpi di sensazioni. I dati, però, cosa dicono?
+I giornali raccontano i Papi a modo loro. È una narrazione mediatica, e come ogni
+narrazione sceglie: sceglie la sintesi, il tono, gli argomenti da mettere in prima
+fila — spesso quelli più discutibili, quelli che fanno notizia. Il Papa finisce per
+diventare una bandiera, piantata su due o tre temi scelti da fuori. Ma se invece dei
+titoli si guardassero i suoi testi, dati alla mano?
 
-Abbiamo preso circa venticinquemila testi dei quattro Papi più recenti — Giovanni
-Paolo II, Benedetto XVI, Francesco e Leone XIV — e li abbiamo dati a un programma
-che non cerca solo le parole, ma capisce il senso delle frasi. Poi abbiamo seguito
-le domande una per una, con una regola sola: a ogni domanda cambiamo strumento di
-misura, e teniamo buona una risposta solo se strumenti diversi danno lo stesso
-numero.
+Le domande sono quelle di sempre, quelle che vengono parlando tra amici, e per una
+volta si possono misurare. Di cosa parlano, i Papi? C'è continuità tra l'uno e
+l'altro? E su quello che è davvero loro — i temi moderni, l'attualità, al di là
+della liturgia e della fede, di cui parlano *per mestiere* — come si espongono?
+Wojtyła e Francesco sono distanti come si dice, l'uno anticomunista e l'altro
+accusato del contrario? Il papa bavarese ha rotto con chi lo ha preceduto, ed è poi
+così lontano da chi è venuto dopo? E Leone, è arrivato in sordina, o nel solco degli
+altri?
 
-## Di cosa è fatto un Papa
+Il materiale per rispondere c'è: circa **venticinquemila testi pubblici** dei quattro
+Papi più recenti — Giovanni Paolo II, Benedetto XVI, Francesco, Leone XIV. Per ogni
+tema, basta contare in quanti documenti compare.
 
-Se prendi tutto quello che dice un Papa, di che cosa è fatto? Abbiamo diviso gli
-argomenti in sei famiglie — liturgia; fede e devozione; gli eventi che gli
-organizzano; i viaggi; il programma del pontificato; l'attualità — e assegnato ogni
-passaggio dei discorsi alla famiglia più vicina per significato. Non i discorsi
-interi, ma i pezzi: un'omelia mischia liturgia e attualità nella stessa pagina.
+## Quasi tutto è mestiere
 
-> **Come, tecnicamente.** Ogni passaggio (~180 parole) diventa un vettore con il
-> modello multilingue `multilingual-e5-base`. I vettori sono normalizzati, quindi
-> confrontarli è fare un coseno: misuriamo ogni passaggio contro sei frasi-ancora,
-> una per famiglia, e gli diamo la più vicina. Nessuna soglia, solo "qual è
-> l'ancora più vicina".
+La prima risposta è scomoda per chi cerca la notizia: gran parte di quello che dice
+un Papa è il suo lavoro. Diviso il contenuto in sei famiglie — **liturgia** (la
+Messa, i sacramenti, le feste dell'anno), **fede e devozione** (Dio, Cristo, Maria,
+i santi, la preghiera), **eventi e ricorrenze** (udienze, anniversari, le visite dei
+vescovi), **viaggi**, **programma del pontificato**, **attualità** (pace, migranti,
+ambiente, lavoro) — e assegnato ogni passaggio alla famiglia più vicina per
+significato, **tre passaggi su quattro finiscono in *fede e devozione*** (76%), un
+altro 3% in *liturgia*.
 
-Il risultato è netto: circa l'**80% è la stessa cosa per tutti e quattro** — Dio,
-Gesù, Maria, il Vangelo, i sacramenti. La chiamiamo la linea rossa. I temi da prima
-pagina vivono nel 20% che resta.
+> **Come, tecnicamente.** Ogni passaggio (~180 parole) diventa un vettore col modello
+> `multilingual-e5-base`; il confronto col significato delle sei famiglie è un coseno,
+> e vince la più vicina. Quel 76% va letto per quello che è: la famiglia "fede e
+> devozione" è così ampia che quasi ogni frase religiosa le cade vicina. Non misura
+> una scelta del Papa, misura il mestiere — ed è alto per tutti e quattro proprio
+> perché è il mestiere.
 
-![Di cosa parlano: la struttura per famiglie](immagini/sintesi-struttura.png)
+![La composizione dei discorsi per famiglia](immagini/sintesi-struttura.png)
 
-Le sei famiglie, però, le abbiamo scelte noi. Allora abbiamo fatto la prova
-opposta: lasciare che gli argomenti si raggruppassero da soli, senza suggerirne
-nessuno. Tornano le stesse aree — il fondo liturgico-devozionale, poi viaggi,
-eventi, programma, attualità. La nostra ipotesi e il dato dicono la stessa cosa, ed
-è il motivo per cui ci fidiamo del resto.
+La parte che distingue un Papa dall'altro, quindi, non è quel grosso blocco dovuto al
+ruolo: è il quinto che resta. È lì che vale la pena guardare.
 
-## Continuità o rottura?
+## La voce di fondo è la stessa
 
-Se il fondo è identico per tutti, dov'è finita la rottura di Francesco? Guardiamo i
-temi che dominano: parlare di Dio e del Vangelo, della pace, della famiglia.
-Misurati per significato valgono quasi le stesse percentuali per ognuno — Dio e
-Vangelo intorno all'85%, la pace intorno al 50%, la famiglia intorno al 52%.
+Prima di cercare le differenze, però, la domanda secca: c'è continuità? Conviene
+misurarla non sul blocco "mestiere", ma tema per tema, ognuno contato per conto suo.
+I tre che dominano tornano quasi identici in tutti e quattro i pontificati: Dio e il
+Vangelo compaiono nell'**85%** dei documenti (tra l'84 e l'88 dei quattro), la pace
+intorno al **50%**, la famiglia intorno al **52%**.
 
-> **Come, tecnicamente.** Tre lenti sullo stesso tema. *A parole*: liste di radici
-> (regex), quota di documenti che ne contengono almeno una. *A significato*: il
-> tema descritto a frase, si prendono i documenti più vicini (coseno sugli e5) in
-> **pari numero** ai positivi a parole — stesso volume, così si confrontano
-> distribuzioni e non soglie. *A raggruppamento*: i gruppi che emergono da soli.
-> Quando le tre concordano, il numero è solido.
+> **Come, tecnicamente.** Ogni tema misurato in due modi e tenuto buono solo se
+> concordano: *a parole* (radici cercate con regex, quota di documenti che le
+> contengono) e *a significato* (i documenti più vicini al tema, in pari numero, per
+> confrontare distribuzioni e non soglie). Sui temi dominanti i due metodi danno lo
+> stesso quadro.
 
-![La continuità vista per significato](immagini/sintesi-continuita-significato.png)
+![I temi dominanti, misurati per significato](immagini/sintesi-continuita-significato.png)
 
-È continuità, non rottura: Francesco cambia gli accenti, non la sostanza.
+Quote quasi uguali a quarant'anni di distanza, da Wojtyła a Leone: questa è la
+continuità, ed è solida perché ogni tema regge da solo, senza appoggiarsi al blocco
+generico di prima.
 
-## Francesco è comunista?
+## Wojtyła e Francesco: il comunismo
 
-Resta il sospetto vero: poveri, migranti, disuguaglianze. I numeri danno ragione,
-in parte, al titolo di giornale. Sui poveri Francesco arriva al 46% dei suoi
-documenti, contro il 33-36% di Giovanni Paolo II e Benedetto; sui migranti al 12%
-contro il 6%; sulla giustizia sociale al 10% contro il 6%. È il suo timbro.
+È qui che il titolo di giornale si gioca tutto. Sui temi sociali Francesco effettivamente
+calca più degli altri: parla di poveri nel **46%** dei suoi documenti contro il 33-36%
+di Giovanni Paolo II e Benedetto, di migranti nel **12%** contro il 6%, di giustizia
+sociale nel **10%** contro il 6%. È il suo timbro, e i numeri non lo nascondono.
 
-![I temi sociali: Francesco accentua, ma il lavoro è di Wojtyła](immagini/sintesi-comunista.png)
+![I temi sociali: dove Francesco calca, e dove no](immagini/sintesi-comunista.png)
 
-Due cose, però, ridimensionano la parola "comunista". La prima: sono temi piccoli
-accanto a Dio, pace e famiglia, e li trattano tutti e quattro — è la dottrina
-sociale della Chiesa, vecchia di oltre un secolo. La seconda è la riga che conta
-davvero, quella del lavoro e degli operai: il primo non è Francesco, è **Giovanni
-Paolo II**, al 12% dei suoi documenti contro l'8% di Francesco. Cioè il Papa che ha
-contribuito a far cadere il comunismo. Parlare di poveri non rende comunisti.
+Ma "comunista" non regge per due motivi, ed entrambi sono nel grafico. Primo: sono temi
+piccoli accanto a Dio, pace e famiglia, e li tratta anche chi comunista non era — è la
+dottrina sociale della Chiesa, vecchia di oltre un secolo. Secondo, la riga del lavoro e
+degli operai ribalta la storia: il primo è **Giovanni Paolo II**, al 12% dei suoi
+documenti contro l'8% di Francesco — proprio il Papa che il comunismo ha contribuito a
+farlo cadere. La distanza Wojtyła-Francesco, sull'asse "destra-sinistra" dei giornali,
+non c'è: cambiano gli accenti dentro la stessa dottrina. Lo stesso vale per l'ambiente,
+che tutti e quattro toccano tra il 16% e il 19%: di Francesco è la formula "casa comune"
+della *Laudato si'*, non il tema.
 
-Stessa storia per l'ambiente: ne parlano tutti più o meno uguale, tra il 16% e il
-19% dei documenti. Di Francesco non è il tema, è il modo di dirlo — la formula
-"casa comune" della *Laudato si'*.
+## Benedetto ha rotto? Leone è in sordina?
 
-## E nel tempo?
+Restano i due Papi che la narrazione tratta agli estremi: Benedetto il teologo che
+"frena", Leone l'ultimo arrivato di cui non si sa nulla. I testi dicono altro.
 
-Un ultimo taglio, il più severo. Togliamo il fondo — liturgia, fede e devozione,
-che già sappiamo continuo per tutti — e teniamo solo il resto: gli argomenti che
-restano quando levi la parte dovuta dal ruolo. Quelli li lasciamo emergere dai
-dati, gli diamo un nome leggendoli, e li contiamo anno per anno.
+Benedetto non rompe con niente: i suoi temi dominanti sono allineati agli altri (Dio e
+Vangelo all'88%, famiglia al 55%, pace al 51%), e l'unica famiglia su cui spicca un po'
+è *programma e storia* (6,7% contro il 5% degli altri) — coerente con un pontificato di
+impronta dottrinale, non con una frattura. Leone, dal canto suo, in sordina non è: nel
+suo (ancora breve) corpus la **pace** arriva al **70%** dei documenti, contro il ~50%
+degli altri tre, e l'**intelligenza artificiale** compare nel **7,8%** — un tema che in
+Giovanni Paolo II e Benedetto era a zero perché semplicemente non esisteva. Leone non
+arriva piano: arriva nel solco dei predecessori, con un paio di accenti suoi.
 
-![Gli argomenti, oltre liturgia e fede, seguiti nel tempo](immagini/argomenti-nel-tempo.png)
+> **Come, tecnicamente.** Tolto il blocco "mestiere" (liturgia e fede), il resto dei
+> passaggi è raggruppato per significato in argomenti, ognuno con un nome dato leggendone
+> i testi tipici, e contato anno per anno. La heatmap qui sotto: una riga per argomento,
+> una colonna per anno, più scuro = se ne parla di più; le righe azzurre sono i cambi di
+> Papa.
 
-> **Come, tecnicamente.** Si tengono i soli passaggi non liturgici e non
-> devozionali, si raggruppano per significato (un KMeans condiviso tra i quattro
-> Papi, così un argomento vale lo stesso per tutti) e a ogni gruppo si dà un nome
-> leggendone i passaggi tipici. Poi: la quota di ogni argomento, anno per anno.
+![Gli argomenti, oltre liturgia e fede, nel tempo](immagini/argomenti-nel-tempo.png)
 
-Si legge così: ogni riga è un argomento, ogni colonna un anno, più scuro vuol dire
-che se ne è parlato di più; le righe azzurre sono i cambi di Papa. Due avvertenze
-prima della storia. Anche qui metà degli argomenti è istituzionale — visite dei
-vescovi, udienze, viaggi, diplomazia: roba dettata dal ruolo, non scelta. E il
-grosso del testo è di Giovanni Paolo II, che ha scritto molto più degli altri:
-contano le quote, non i numeri secchi.
+Nel tempo si vede la stessa cosa: il fondo non si muove, gli accenti sì, e quasi sempre
+al cambio di Papa. Le visite ai vescovi e la Polonia sono fitte negli anni di Wojtyła e
+si schiariscono dopo; povertà e lavoro, fame e agricoltura, e il registro "a braccio" di
+Francesco — interviste, dialoghi — si accendono dal 2013 e restano con Leone. Metà di
+questi argomenti, va detto, è comunque istituzionale (vescovi, udienze, viaggi), e il
+grosso del testo è di Wojtyła, che ha scritto molto più degli altri: contano le quote,
+non i numeri secchi.
 
-Detto questo, gli argomenti di contenuto si muovono, e quasi sempre al cambio di
-Papa. Le visite *ad limina* e la Polonia sono fitte negli anni di Giovanni Paolo II
-e si schiariscono dopo. Povertà e lavoro, fame e agricoltura (la FAO) e il registro
-"a braccio" di Francesco — interviste, dialoghi — si accendono dal 2013 e restano
-con Leone. Pace e disarmo va a tratti, segue le guerre del momento. Il fondo che
-abbiamo tolto, invece, non si muove.
+## Cosa resta
 
-Una cautela: la heatmap dice *che* un argomento va a ondate, non ancora *cosa*
-contiene di preciso quell'ondata. Per quello serve scendere nel dettaglio, una
-macchia alla volta — ed è lavoro per le analisi che verranno.
-
-## La morale
-
-Da qualunque lato la si guardi, viene fuori la stessa cosa: non un Papa contro gli
-altri, ma una voce sola che sposta accenti e parole su un fondo che resta.
-Francesco accentua i poveri e i migranti, è vero; ma sul lavoro lo batte Wojtyła, e
-l'ottanta per cento di quello che dicono i quattro è lo stesso. Continuità piena,
-comunismo no.
+Tolti i titoli, resta un quadro semplice. La voce di fondo — Dio, la pace, la famiglia —
+è la stessa per tutti e quattro, a decenni di distanza. Le differenze stanno negli
+accenti, nel quinto di contenuto che ogni Papa aggiunge di suo, e si spostano col tempo
+più che separare un Papa dagli altri. Francesco calca sui poveri, ma sul lavoro lo
+precede Wojtyła; Benedetto non rompe; Leone non arriva in sordina. La bandiera che i
+giornali piantano su un tema solo, alla prova dei testi, non sta in piedi.
 
 ---
 
-*Solo conteggi e percentuali, mai i testi (sono © Libreria Editrice Vaticana). Il
-"come" di ogni numero, passo per passo, è nell'[appendice tecnica](appendice-tecnica.md),
-che porta ai notebook con il codice.*
+*Solo conteggi e percentuali, mai i testi (© Libreria Editrice Vaticana). Il "come" di
+ogni numero, passo per passo, è nell'[appendice tecnica](appendice-tecnica.md), che
+porta ai notebook col codice.*
